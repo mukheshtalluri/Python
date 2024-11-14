@@ -1,0 +1,35 @@
+1. What is Git and Github ?
+--> Git is an Version Control System where we can keep track of changes in the files based on the file commit history.
+    and we can revert back them based on the requirement.
+    Ex : Git, Subversion, Mercurial, Perforce --> These are some examples for the Version Control Systems.
+--> Github is an server(Remote repository) it will host the git repository's.
+    Ex : Github, Gitlabs, Bitbucket --> These are some hosting servers for the repository's.
+
+2. Basic Bash Commands which are required for the file operations and Other purpose.
+--> Start . : It will open file manager.
+--> ls : It will show the list files in the current directory.
+--> cd file_path : It will change current directory to the file_path.
+--> pwd : It will show the current directory.
+--> touch file_name : It will create the new file based on the file_name.
+--> mkdir folder_name : It will create the new folder.
+--> rm file_name : It will remove the file with file_name which is provided. it should be there in current directory.
+--> rm -rf folder_name : It will remove the folder with folder_name which is provided. it should be there in current directory.
+--> ls -a : It will show the hidden files in current directory.
+
+3. Basic CMD Commands.
+--> where python : It will give the python installation path.
+--> python "file_name" : It will execute the python program.
+--> D:\ : It will switch to the D drive.
+--> start . : It will open file manager.
+--> dir : It will show the list files in the current directory.
+--> echo > "file_name" : It will create the new file with file name with extension.
+--> del file_name : It will delete the file with file_name.
+--> mkdir folder_name : It will create the new folder.
+--> rmdir folder_name : It will delete the folder.
+--> cd : It will show the current directory.
+
+4. Basic Git Commands.
+--> git init : It will initialise the empty git repository. with the .git file extension which is hidden.
+--> git add file_name : It will add file_name file to staging area.
+--> git add . : It will add all files to the staging area.
+--> git commit -m "Message" : It will commit all files from staging area to commiting area with the Message.

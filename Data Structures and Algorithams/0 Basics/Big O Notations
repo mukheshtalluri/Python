@@ -1,0 +1,48 @@
+1. How to find a program is efficient ?
+--> The program which is executed fastly and which takes less memory. There are some methods to find which program is efficient.
+    There are Time complexity and Space complexity.
+
+2. What is Time complexity ?
+--> Time complexity is the Technique where we can find the no.of operations are required by the program to execute output.
+
+3. What is the Space complexity ?
+--> Space complexity is the Technique how much extra memory required by the program while run time.
+
+3. What is Asymptotic analysis ?
+--> Asymptotic analysis is the behavior of the program for give input size, often they input size reaches to the max value.
+    i. Drop non-dominant terms : We will keep terms which are mainly impact the program execution.
+       Ex : Big O(n^2 + 20n  + 10) --> If my input size is 5. ( 25 + 100 + 10) --> Here 20n is the more dominant term.
+            but we wont consider with input size. When program input will reaches nearly to infinite which term impacting more will consider.
+            -->Final Complexity : Big O(n^2)
+    ii.Drop the constants : If any constant terms in the complexity will remove all those constants.
+       Ex : Big O(20n + 10) --> In which 20 and 10 are the constant terms will remove both of the them.
+            -->Final Complexity : Big O(n)
+
+4. What is Auxiliary space ?
+--> Auxiliary space is the Extra memory required by the program other than input size.
+
+5. What is the best, avg, worst case in time and space complexity ?
+--> Best case (Ω) - Omega : To perform any operation what is the best case to execute the program.
+                            Ex : Append value to list.
+--> Average case (Θ) - Theta : To perform any operation what is the average case to execute the program.
+                               Ex : Insert value at middle of the list.
+--> Worst case (O) - Big O : To perform any operation what is the worst case to execute the program.
+                             Ex : Insert value at start of the list.
+--> We will always mainly focus on the worst case because we dont know the element occurrence in the problem.
+
+6.What are all Big O notations ?
+--> As the Time and Space complexity point of view how many operations / memory space required to execute the program / function.
+    i . Big O(1) - Constant complexity : With Irrespective size of input the program will take only one operation to give the result.
+                   Ex : List[1] --> Accessing the element from the list through index.
+    ii. Big O(Log n) - Logarithmic complexity : The program run time grows logarithmically with input size.
+                    Ex : Binary Search
+    iii. Big O(n) - Linear complexity : The program run time grows linearly with the input size.
+                    Ex : Print all values from the loop.
+    vi. Big O(n log n) - Linearithmic complexity : The run times grows the n times of logarithmic value of input size.
+                         Ex : Merge sort, Heap sort
+    v. Big O(n^2) -  Quadratic complexity : The running time grows quadratically with the input size.
+                     Ex : Bubble sort, insertion sort, selection sort
+    vi. Big O(2^n) - Exponential time: The running time doubles with each additional element in the input size.
+                     Ex : Fibonacci sequence using recursive approach.
+    vii. Big O(n!) - Factorial time : The running time grows factorially with the input size.
+                     Ex : Generating all permutations of a set.

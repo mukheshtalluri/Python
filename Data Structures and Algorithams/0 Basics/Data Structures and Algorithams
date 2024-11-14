@@ -1,0 +1,29 @@
+Data structure : Data structures are the different ways of organising the data that can be used efficiently.
+Algorithm : Algorithm are set of steps which can accomplish the task.
+
+Types of data structure:
+--> Primitive :
+    --> Integer
+    --> Float
+    --> Character
+    --> Boolean
+    --> String
+--> Non - primitive :
+    --> Linear:
+        --> Static :
+            --> Array
+        --> Dynamic :
+            --> Linked list
+            --> Stack
+            --> Queue
+    --> Non - Linear :
+        --> Graph
+        --> Tree
+
+Types of algorithm:
+1. Simple recursive algorithm.
+2. Divide and conquer algorithm.
+3. Dynamic programing.
+4. Greedy algorithm.
+5. Brute force algorithm.
+6. Randomised algorithm.

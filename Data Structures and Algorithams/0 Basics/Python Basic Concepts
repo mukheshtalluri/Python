@@ -1,0 +1,33 @@
+1. What is Python.
+--> Python is Objected oriented program language(in which everything treated as object) it will supports for the
+    Functional programing and Procedural programing.
+--> Python is general purpose programing language which means we can use if for the web development, app development,
+    game development, data science, machine learning..etc
+--> Python is an dynamically typed language where we dont declare object data type python interpreter will
+    capability to understand which data type it is.
+--> Python primerly consider it as the interpreted language. This means code executed line by line. How ever initially
+    Python will compiled code into byte code (Interpreter) .pyc files and then Interpreted ( Python virtual machine)  and give results.
+
+2. Memory management in python.
+--> Python mainly 3 main parts.
+    i. Python Stack memory : Stack memory is responsible for the storing object reference variable and order of method execution.
+       It will take care mainly execution related things.
+    ii. Python Heap memory : All the actual objects are store in the heap memory.
+        --> Ex : a = 5 --> a will be stored in stack and value 5 will be stored in heap memory.
+    iii. Garbage collector : In Python Garbage collection done automatically based on the reference count and cycle count.
+         we can call garbage collector manually as well for better performance tuning using gc module.
+
+3. How objects will work.
+--> Once Object got created in python, In python we will call variables also objects. Object is referred by the some variable
+    Suppose a = 15, a will stored in the stack memory and 15 will be stored in the heap memory. if again we will create
+    one more variable called b = 15 , in this condition it wont create any extra space in heap memory b variable got created
+    in stack it will referred the same object. Which means memory address of the a and b are same and simply 15 object
+    reference count increased to 2 because now a, b two variables pointing to the same object.
+
+4. What are all mutable and immutable objects in Python.
+--> Mutable objects : Mutable objects are the objects after the object creation we can perform some operations like adding elements
+    like that there memory address will remain same.
+    Ex : List, Set, Dictionary.
+--> Immutable objects : Immutable objects won't support any operations after the object once got created. even we have
+    special methods to perform operation on immutable objects there memory address is going to change if you perform like concatenation.
+    Ex : Tuple, String, Int
