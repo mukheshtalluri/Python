@@ -101,8 +101,7 @@ def delete_binary_search_tree(root_node):
     root_node.right_child = None
     return "The binary tree is successfully deleted."
 
-binary_search_tree = BinarySearchTree(None)
-insert_node(binary_search_tree, 70)
+binary_search_tree = BinarySearchTree(70)
 insert_node(binary_search_tree, 50)
 insert_node(binary_search_tree, 90)
 insert_node(binary_search_tree, 40)
