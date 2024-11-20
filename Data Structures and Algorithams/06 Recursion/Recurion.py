@@ -19,6 +19,7 @@ def fourth_method():
 
 first_method()
 
+
 # Print numbers upto the given number.
 def numbers(n):
     if n == 1:
@@ -56,7 +57,7 @@ def count_number(n):
     else:
         return n % 10 + count_number(n // 10)
 
-print(count_number(9908515262))
+print(count_number(123456789))
 
 
 

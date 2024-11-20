@@ -1,0 +1,13 @@
+Recursion : A way of solving a problem by having a function calling itself.
+            - Performing the same operation multiple times with different inputs
+            - In every step we try smaller inputs to make the problem smaller.
+            - Base condition is needed to stop the recursion, otherwise infinite loop will occur.
+
+
+# Pseudo code for the Recursion algorithm.
+
+def recursionMethod(parameters):
+    if exit from condition if it is satisfied:
+        return some value
+    else:
+        recursionMethod(modified parameters)
