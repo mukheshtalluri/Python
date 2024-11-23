@@ -127,13 +127,14 @@ class SingleLinkedList:
             before = temp
             temp = after
 
-single_linked_list = SingleLinkedList(7)
-single_linked_list.append_value(16)
-single_linked_list.append_value(25)
-single_linked_list.append_value(34)
-single_linked_list.append_value(43)
-single_linked_list.append_value(52)
-single_linked_list.append_value(61)
-single_linked_list.append_value(70)
-single_linked_list.reverse_linkedlist()
-print(single_linked_list.print_linked_list())
+if __name__ == "__main__":
+    single_linked_list = SingleLinkedList(7)
+    single_linked_list.append_value(16)
+    single_linked_list.append_value(25)
+    single_linked_list.append_value(34)
+    single_linked_list.append_value(43)
+    single_linked_list.append_value(52)
+    single_linked_list.append_value(61)
+    single_linked_list.append_value(70)
+    single_linked_list.reverse_linkedlist()
+    print(single_linked_list.print_linked_list())

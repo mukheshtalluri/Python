@@ -90,7 +90,7 @@ def delete_node(root_node, value):
             temp = root_node.left_child
             root_node = None
             return temp
-        temp = min_value(root_node)
+        temp = min_value(root_node.right_child)
         root_node.data = temp.data
         root_node.right_child = delete_node(root_node.right_child, temp.data)
     return root_node
@@ -108,7 +108,7 @@ insert_node(binary_search_tree, 40)
 insert_node(binary_search_tree, 60)
 insert_node(binary_search_tree, 80)
 insert_node(binary_search_tree, 100)
-delete_node(binary_search_tree, 90)
+delete_node(binary_search_tree, 70)
 level_order_traverse(binary_search_tree)
 
 

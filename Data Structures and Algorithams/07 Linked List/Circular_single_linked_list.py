@@ -49,15 +49,54 @@ class CircularSingleLinkedList:
     def pop_last_value(self):
         if self.length == 0:
             return "No elements in linked list to remove."
-        temp = self.tail
-        pre = self.tail
-        while temp.next is not self.head:
-            pre = temp
+        temp = self.head
+        while temp.next is not self.tail:
             temp = temp.next
-        self.tail = pre
+        temp.next = None
+        self.tail = temp
+        self.length -= 1
+        return temp
+
+    def pop_first_value(self):
+        if self.length == 0:
+            return "No elements in linked list to remove."
+        temp = self.head
+        self.head = self.head.next
+        temp.next = None
         self.tail.next = self.head
         self.length -= 1
         return temp
+
+    def get_value(self, index):
+        temp = self.head
+        for i in range(index):
+            temp = temp.next
+        return temp
+
+    def set_value(self, index, value):
+        temp = self.get_value(index)
+        if temp:
+            temp.value = value
+            return True
+        return  False
+
+    def insert_value(self, index, value):
+        if index < 0 or index > self.length:
+            return "Index out of bound."
+        elif index == 0:
+            return self.prepend_value(value)
+        elif index == self.length:
+            return self.append_value(value)
+        else:
+            new_node = Node(value)
+            pre = self.get_value(index - 1)
+            new_node.next = pre.next
+            pre.next =  new_node
+        self.length += 1
+
+
+
+
 
 
 
@@ -67,5 +106,10 @@ class CircularSingleLinkedList:
 circular_single_linked_list = CircularSingleLinkedList(7)
 circular_single_linked_list.append_value(16)
 circular_single_linked_list.append_value(25)
-circular_single_linked_list.pop_last_value()
+circular_single_linked_list.append_value(34)
+circular_single_linked_list.append_value(43)
+circular_single_linked_list.append_value(52)
+circular_single_linked_list.append_value(61)
+circular_single_linked_list.append_value(70)
+circular_single_linked_list.insert_value(3, 1)
 print(circular_single_linked_list.print_linked_list())

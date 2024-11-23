@@ -102,6 +102,52 @@ def insert_node(root_node, value):
         return left_rotate(root_node)
     return root_node
 
+def min_value(root_node):
+    if root_node or root_node.left_child is None:
+        return root_node
+    return min_value(root_node.left_child)
+
+def delete_node(root_node, value):
+    if not root_node:
+        return root_node
+    elif value < root_node.data:
+        root_node.left_child = delete_node(root_node.left_child, value)
+    elif value > root_node.data:
+        root_node.right_child = delete_node(root_node.right_child, value)
+    else:
+        if root_node.left_child is None:
+            temp = root_node.right_child
+            root_node = None
+            return temp
+        elif root_node.right_child is None:
+            temp = root_node.left_child
+            root_node = None
+            return temp
+        temp = min_value(root_node.right_node)
+        root_node.data = temp.data
+        root_node.right_child = delete_node(root_node.right_child, temp.data)
+        balance = get_balance(root_node)
+        if balance > 1 and value < root_node.left_child.data:
+            return right_rotate(root_node)
+        if balance > 1 and value > root_node.left_child.data:
+            root_node.left_child = left_rotate(root_node.left_child)
+            return right_rotate(root_node)
+        if balance < -1 and value > root_node.right_child.data:
+            return left_rotate(root_node)
+        if balance < -1 and value < root_node.right_child.data:
+            root_node.right_child = right_rotate(root_node.right_child)
+            return left_rotate(root_node)
+        return root_node
+
+def delete_tree(root_node):
+    root_node.data = None
+    root_node.left_child = None
+    root_node.right_child = None
+    return "The AVL tree is deleted successfully."
+
+
+
+
 avl_tree = AVLTree(20)
 avl_tree = insert_node(avl_tree, 30)
 avl_tree = insert_node(avl_tree, 40)
