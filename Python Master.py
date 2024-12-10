@@ -81,6 +81,49 @@ characters it will support for the indexing. String is an immutable data type.
 Indexing: The items are arranged in the sequential order and number to that particular order. index always start from 0.
 Immutable: Once data type is created it cont be changeable.
 
+Conditional statements: Conditional statements will help us to take decision. In python, we will have if, elif, else
+statements. Based on that we can control the flow of execution. When we want to check the multiple statements we can use
+Nested conditional statements.
+
+Loops: Loops will help us to run the statement multiple times based on the condition.Instead of writing of multiple lines
+code we can use loops. We have while, for loop
+While loop: While loop will run until the condition become False otherwise run infinitely it will create the memory issues.
+For loop: For loop will run the until iteration values are exist. Since it will run until iteration values are there it won't create
+any infinite loop.
+Range: Range is used generate the numbers with in the boundary. In range function we have lower index, upper index and
+step index arguments we have.
+Else statement with loop: If loop run completely then else block will execute if any break in the loop it won't execute
+else statement as well.
+Do-while loop: Do while loop run first it will print the value then check for the condition. In python, we don't have
+any such loop, but we can create explicitly.
+
+Break and Continue: Break and continue are the two statements will predominantly use while working with the loop.
+Break statement will completely break the loop. Continue statement will pass the current loop.
+
+Functions : Functions are the block of code which we can create for the reusability. If any particular operation need to
+perform most of the time same lines of code write multiple times it will cause memory loss issues instead of that we can function
+and will call function when it is required. Function will take input from the user as the argument. Arguments are optional
+in case of functions, and we have different types of argument types also there will discuss them
+Functions mainly will classify into types Built-in-functions and User-defined-functions
+Built-in-function: Built-in-functions are functions which come along with the python installation. we can directly use those
+functions no need to create any code or functions for that. Ex : len(), max(), print(), input()...
+User-defined-function: This function we need to create as per requirement, and we need to define what to be performed when call the function.
+Arguments: Function will take input from the user in the form of argument. There are few types of arguments will be there will discuss them
+Default arguments: Default arguments will define over the function creation time itself only. while calling the function
+if we not pass any argument it will consider default argument will give us the output. if we provide any value it will
+override the default value.
+Key-word arguments: While calling the function we need to provide arguments in the form of key and value pairs. The main
+use of these arguments no need to maintain argument order will directly call with the key.
+Required arguments: We need to define all arguments which we define while creating the function otherwise it will give error.
+and we need to maintain the same order while calling function.
+Variable length arguments: When creating the function we don't know how many inputs we need to accept in this scenario
+will use variable length arguments. This will be two type
+Arbitrary arguments: It will work similar to required arguments the diff is we can provide no.of arguments we want there is no limit.
+Keyword arbitrary arguments: It will work same as the key word arguments the diff is we can provide no.of arguments as we required.
+
+Return : Return statement used to store the value in the variable, and we can use many other purpose. If we want to use
+value in other function we can store in return statement will use.
+
 
 """
 # Using internal module
@@ -374,21 +417,166 @@ print(name.isalnum())
 # isalpha - If string only contain A-Z, a-z Then it will return True
 print(name.isalpha())
 
-# islower
+# islower - If string will contain all lower case letters then it will return True else False.
+print(name.islower())
 
-# isprintable
+# isprintable - If any character can not print it will contain in the string it will return False.
+print(name.isprintable())
 
-# isspace
+# isspace - If string will contain any space or tab in it will return True.
+print(name.isspace())
 
-# istitle
+# istitle - If string is title case then it will return True else False.
+print(name.istitle())
 
-# isupper
+# isupper - If string will contain all characters are upper case then it will return True
+print(name.isupper())
 
-# startswith
+# startswith - If string start with the argument provided it will return True
+print(name.startswith("b"))
 
-# swapcase
+# swapcase - It will covert all lower case letters to upper case and upper case to lower case.
+print(name.swapcase())
 
-# title
+# title - It will make every first character in a string to upper case.
+print(name.title())
+
+
+# Conditional statements
+num = 0
+if num == 0:
+    print("Given number is neither positive nor negative.")
+elif num > 0:
+    if num % 2 == 0:
+        print("Given number is Even number.")
+    else:
+        print("Given number is Odd number.")
+else:
+    print("Given number is Negative number.")
+
+
+# Loops
+# While loop
+i = 0
+while i <= 10:
+    print("While loop i value :", i)
+    i = i + 1
+
+# For loop
+list_of_items = ["apple", "bat", "cat", "dog", "elephant", "fox", "goat"]
+for item in list_of_items:
+    print("Items in the list :", item)
+
+# For loop with range function
+for num in range(0, 11, 2):
+    print(num)
+
+# Else statement with loop
+i = 0
+while i <= 10:
+    print("While loop i value :", i)
+    i = i + 1
+    if i == 3:
+        break
+else:
+    print("Value out of loop.")
+
+# Do-while loop
+i = 0
+while i < 10:
+    print("The value of i is :", i)
+    i = i + 1
+    if i < 5:
+        break
+
+# Break statement
+i = 0
+while i < 5:
+    print(i)
+    i = i + 1
+    if i == 3:
+        break
+
+# Continue statement
+for i in range(11):
+    if i % 2 == 0:
+        continue
+    print(i)
+
+
+# Functions - Def is the key word to create function
+def greet_person():
+    print("Hello human..!")
+greet_person() # Calling function
+
+# Built-in-function
+list_of_values = [18, 26, 39, 47, 51, 64, 78, 83, 90]
+print(len(list_of_values))
+print(type(list_of_values))
+
+# User defined function
+def addition():
+    a = 10
+    b = 5
+    print(a + b)
+
+addition()
+
+# Default arguments - We need to define default arguments at the end only otherwise it will override, Argument order need to maintain.
+def person_info(name, language = "hindi", state = "india"):
+    print(f"My name is {name}, will speak {language} and from {state}.")
+
+person_info("Star") # Using of Default arguments
+person_info("Bunny", "Telugu", "Andra pradesh") # Override default arguments
+
+# Key word arguments - We define use input in any order, it needs to be match the key.
+def person_info(name, language, state):
+    print(f"My name is {name}, will speak {language} and from {state}.")
+
+person_info(name = "Rock star", language = "Tamil", state = "Tamilanadu")
+person_info(name = "Rock star", state = "Tamilanadu", language = "Tamil") # Both the will produce same output.
+
+# Required Arguments - Here we need to provide how many arguments define in the function and maintain the order.
+def info(name, age):
+    print(f"My name is {name} and i am {age} year's old.")
+
+info("Naresh", 28)
+
+# Variable length arguments
+# Arbitrary arguments - Type will be tuple
+def addition(*args):
+    result = 0
+    for num in args:
+        result += num
+    print("The sum of numbers :",result)
+
+addition(1, 2, 3, 4, 5, 6)
+
+# Key word arbitrary arguments - Type will be dictionary
+def multiplication(**kwargs):
+    result = 1
+    for key, value in kwargs.items():
+        result *= value
+    print("The multiplication of numbers :",result)
+
+multiplication(a = 1, b = 2, c = 3, d = 4, e = 5)
+
+# Return
+def addition(a, b):
+    return a + b
+
+result = addition(5, 6)
+print(result)
+
+
+
+
+
+
+
+
+
+
 
 
 
